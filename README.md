@@ -65,19 +65,28 @@ A sample file **sample_equipment_data.csv** is included in the repository for te
 ---
 
 ## 📂 Project Structure
-
+```
 chemical-equipment-visualizer/
 ├── backend/
-|    ├── backend/
-│   ├── equipment/
-│   ├── db.sqlite3
-│   └── manage.py
+│ ├── backend/
+│ │ ├── settings.py
+│ │ ├── urls.py
+│ │ └── wsgi.py
+│ ├── equipment/
+│ │ ├── models.py
+│ │ ├── views.py
+│ │ ├── urls.py
+│ │ └── utils.py
+│ ├── db.sqlite3
+│ └── manage.py
 ├── web-frontend/
-│   └── src/App.js
+│ └── src/
+│ └── App.js
 ├── desktop-app/
-│   └── app.py
+│ └── app.py
 ├── sample_equipment_data.csv
 └── README.md
+```
 
 ## 🚀 Setup Instructions
 1️⃣ Backend Setup (Django)
