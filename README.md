@@ -27,48 +27,45 @@ Valve A,Valve,8,4,290
 Reactor A,Reactor,15,7,350
 ```
 
-A sample file sample_equipment_data.csv is included in the repository for testing and demo purposes.
+A sample file **sample_equipment_data.csv** is included in the repository for testing and demo purposes.
 
-🏗️ Tech Stack
-Layer	Technology
-Backend	Django, Django REST Framework
-Data Handling	Pandas
-Database	SQLite
-Web Frontend	React.js, Chart.js
-Desktop Frontend	PyQt5, Matplotlib
-Authentication	Basic Authentication (DRF)
-Version Control	Git & GitHub
-⚙️ Key Features
+---
 
-CSV upload from Web and Desktop
+## 🏗️ Tech Stack
 
-Data analytics using Pandas
+| Layer | Technology |
+|------|-----------|
+| Backend | Django, Django REST Framework |
+| Data Handling | Pandas |
+| Database | SQLite |
+| Web Frontend | React.js, Chart.js |
+| Desktop Frontend | PyQt5, Matplotlib |
+| Authentication | Basic Authentication (DRF) |
+| Version Control | Git & GitHub |
 
-Summary statistics:
+---
 
-Total equipment count
+## ⚙️ Key Features
 
-Average flowrate
+- CSV upload from **Web and Desktop**
+- Data analytics using **Pandas**
+- Summary statistics:
+  - Total equipment count
+  - Average flowrate
+  - Average pressure
+  - Average temperature
+  - Equipment type distribution
+- Interactive visualizations:
+  - Chart.js (Web)
+  - Matplotlib (Desktop)
+- History management (last 5 uploads)
+- PDF report generation
+- Common backend API for all clients
 
-Average pressure
+---
 
-Average temperature
+## 📂 Project Structure
 
-Equipment type distribution
-
-Interactive visualizations:
-
-Chart.js (Web)
-
-Matplotlib (Desktop)
-
-History management (last 5 uploads)
-
-PDF report generation
-
-Common backend API for all clients
-
-📂 Project Structure
 chemical-equipment-visualizer/
 ├── backend/
 |    ├── backend/
@@ -82,7 +79,7 @@ chemical-equipment-visualizer/
 ├── sample_equipment_data.csv
 └── README.md
 
-🚀 Setup Instructions
+## 🚀 Setup Instructions
 1️⃣ Backend Setup (Django)
 cd backend
 pip install django djangorestframework pandas reportlab django-cors-headers
@@ -92,7 +89,6 @@ python manage.py runserver
 
 
 Backend runs at:
-
 http://127.0.0.1:8000
 
 2️⃣ Web Frontend Setup (React)
@@ -102,7 +98,6 @@ npm start
 
 
 Web application runs at:
-
 http://localhost:3000
 
 3️⃣ Desktop Application Setup (PyQt5)
@@ -110,61 +105,42 @@ cd desktop-app
 pip install pyqt5 matplotlib requests
 python app.py
 
-🔐 Authentication Note
-
+##🔐 Authentication Note
 The backend APIs are secured using Basic Authentication via Django REST Framework.
-
 Web (React) and Desktop (PyQt) clients send credentials programmatically.
-
 API access without credentials will result in 401 Unauthorized.
-
 When downloading PDF reports directly via the browser, a standard Basic Authentication prompt may appear.
-
 This setup is intentional and suitable for demonstration purposes.
 
-🔗 API Endpoints
+##🔗 API Endpoints
 Method	Endpoint	Description
 POST	/api/upload/	Upload CSV and receive summary
 GET	/api/history/	Retrieve last 5 uploads
 GET	/api/report/<id>/	Download PDF report
-📊 Demo
 
+##📊 Demo
 A short demo video (2–3 minutes) demonstrates:
-
 CSV upload via Web app
-
 Data summary and charts
-
 Upload history and PDF download
-
 Desktop application using the same backend
 
-📹 Demo Video Link: (add link here)
+##📹 Demo Video Link: (add link here)
 
-🧠 Design Highlights
-
+##🧠 Design Highlights
 Single backend serving multiple clients
-
 Backend as the single source of truth
-
 Stateless REST APIs
-
 Consistent data representation across Web and Desktop
-
 Clear separation of concerns
 
-✅ Conclusion
+##✅ Conclusion
 
 This project demonstrates:
-
 Full-stack development
-
 Proper data handling and analytics
-
 REST API design and integration
-
 Cross-platform application development
-
 It fulfills all requirements specified in the intern screening task.
 
 
