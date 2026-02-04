@@ -106,41 +106,65 @@ pip install pyqt5 matplotlib requests
 python app.py
 
 ##🔐 Authentication Note
+
 The backend APIs are secured using Basic Authentication via Django REST Framework.
+
 Web (React) and Desktop (PyQt) clients send credentials programmatically.
+
 API access without credentials will result in 401 Unauthorized.
+
 When downloading PDF reports directly via the browser, a standard Basic Authentication prompt may appear.
+
 This setup is intentional and suitable for demonstration purposes.
 
-##🔗 API Endpoints
+## 🔗 API Endpoints
+
 Method	Endpoint	Description
+
 POST	/api/upload/	Upload CSV and receive summary
+
 GET	/api/history/	Retrieve last 5 uploads
+
 GET	/api/report/<id>/	Download PDF report
 
-##📊 Demo
+## 📊 Demo
+
 A short demo video (2–3 minutes) demonstrates:
+
 CSV upload via Web app
+
 Data summary and charts
+
 Upload history and PDF download
+
 Desktop application using the same backend
 
-##📹 Demo Video Link: (add link here)
+## 📹 Demo Video Link: (add link here)
 
-##🧠 Design Highlights
+## 🧠 Design Highlights
+
 Single backend serving multiple clients
+
 Backend as the single source of truth
+
 Stateless REST APIs
+
 Consistent data representation across Web and Desktop
+
 Clear separation of concerns
 
-##✅ Conclusion
+## ✅ Conclusion
 
 This project demonstrates:
+
 Full-stack development
+
 Proper data handling and analytics
+
 REST API design and integration
+
 Cross-platform application development
+
 It fulfills all requirements specified in the intern screening task.
 
 
